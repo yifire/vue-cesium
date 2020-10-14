@@ -145,6 +145,7 @@ const methods = {
     switch (type) {
       case 'distanceMeasuring':
         polyline.positions.push(cartesian)
+        polyline.distance = this.getDistance(polyline.positions)
         polyline.distances.push(polyline.distance)
         onMeasureEvt(polyline, nIndex)
         break
